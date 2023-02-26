@@ -1,0 +1,38 @@
+@import "../../assets/styles/core/variables";
+.button {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 11px 15px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 19px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  &.primary {
+    background: $primary;
+    color: $text-light;
+    &:hover {
+      background: $primary-dark;
+    }
+  }
+  &.secondary {
+    color: $text-dark;
+  }
+  &.text {
+    background: none;
+    color: $primary;
+    padding: 0;
+    &:hover {
+      background: none;
+    }
+  }
+  &.small {
+    padding: 6px 10px;
+    font-size: 0.825rem;
+  }
+}

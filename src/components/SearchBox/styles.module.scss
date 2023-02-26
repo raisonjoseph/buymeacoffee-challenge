@@ -1,0 +1,21 @@
+.inputContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(34, 34, 34, 0.1);
+  border-radius: 20px;
+  padding: 0px 14px;
+  margin-right: 10px;
+
+  .inputField {
+    border: none;
+    border-radius: 20px;
+    padding: 0px 4px;
+    font-size: 0.875rem;
+    outline: none;
+    height: 30px;
+    width: 100%;
+    &::placeholder {
+      color: rgba(34, 34, 34, 0.5);
+    }
+  }
+}

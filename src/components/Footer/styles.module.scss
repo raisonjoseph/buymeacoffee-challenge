@@ -1,0 +1,68 @@
+@import "../../assets/styles/core/variables";
+.footer {
+  .content {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    .logoContainer {
+      margin-right: min(200px, 30%);
+    }
+    .footerTitle {
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: black;
+    }
+    .row {
+      flex: 1;
+
+      .appLink {
+        width: 138px;
+        height: 40px;
+        display: inline-block;
+        margin-top: 60px;
+        &:first-of-type {
+          margin-right: 20px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      @media (max-width: 992px) {
+        .col {
+          margin-bottom: 2rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .appLink {
+          margin-top: 24px;
+        }
+      }
+    }
+    .list {
+      list-style-type: none;
+      padding-inline-start: 0px;
+      li {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 150%;
+        color: black;
+        margin-top: 1rem;
+      }
+    }
+    @media (max-width: 576px) {
+      padding-top: 64px;
+      display: block;
+      .logoContainer {
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .copyright {
+    font-weight: 400;
+    font-size: 0.825rem;
+    color: $text-dark;
+    margin-top: 24px;
+  }
+}
