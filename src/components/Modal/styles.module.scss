@@ -1,0 +1,100 @@
+@import "../../assets/styles/core/variables";
+.modalBody {
+  padding: 32px 48px;
+  outline: none;
+  border: none;
+  .modalHeader {
+    padding-bottom: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey;
+    h5 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 29px;
+      margin: 0;
+      color: black;
+    }
+    button {
+      color: black;
+      i {
+        width: 24px;
+        height: 24px;
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
+  }
+  .modalContent {
+    margin-top: 24px;
+  }
+}
+
+.overlayBase {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 13, 13, 0.3);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  z-index: 4;
+}
+
+.overlayAfterOpen {
+  opacity: 1;
+}
+
+.overlayBeforeClose {
+  opacity: 0;
+}
+
+.modalBase {
+  position: fixed;
+  inset: 10% 0px 0px 50% !important;
+  opacity: 0;
+  transform: translate(-50%, -10%) scale(0.5);
+  width: min(648px, 70%);
+  height: min(510px, 62%);
+  min-height: 300px;
+  transition: all 0.3s ease-in-out;
+  background: white;
+  outline: none;
+}
+
+.modalAfterOpen {
+  inset: 10% 0px 0px 50% !important;
+  transform: scale(1) translate(-50%, -10%);
+  opacity: 1;
+}
+
+.modalBeforeClose {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+@media (max-width: 576px) {
+  .modalBase {
+    top: unset;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    transform: translateY(120px);
+  }
+
+  .modalAfterOpen {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .modalBeforeClose {
+    transform: translateY(120px);
+    opacity: 1;
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./styles.module.scss";
 import clsx from "clsx";
+import styles from "./styles.module.scss";
 import Button from "../../components/Button.tsx";
 
 //Images

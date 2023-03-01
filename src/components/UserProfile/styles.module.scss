@@ -1,0 +1,20 @@
+@import "../../assets/styles/core/variables";
+.userProfile {
+  display: flex;
+  align-items: center;
+  .username {
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin: 0;
+    color: $text-dark;
+  }
+  .imageContainer {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    margin-left: 8px;
+    img {
+      width: 100%;
+    }
+  }
+}

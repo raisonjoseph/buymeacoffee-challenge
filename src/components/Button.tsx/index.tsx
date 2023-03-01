@@ -3,9 +3,11 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
-  type?: "text" | "default";
+  htmlType?: "submit" | "reset" | "button";
+  variant?: "primary" | "secondary" | "muted";
+  type?: "text" | "icon" | "default";
   buttonSize?: "small" | "default";
+  loading?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,8 +15,12 @@ const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   type = "default",
   buttonSize = "default",
+  htmlType = "button",
+  loading = false,
   children,
   onClick,
+  disabled,
+  ...props
 }) => {
   return (
     <button
@@ -25,9 +31,20 @@ const Button: React.FC<ButtonProps> = ({
         styles[type],
         styles[buttonSize]
       )}
+      type={htmlType}
       onClick={onClick}
+      disabled={disabled || loading}
+      {...props}
     >
-      {children}
+      {loading ? (
+        <div className={styles.loader}>
+          <span className={styles.dot} />
+          <span className={styles.dot} />
+          <span className={styles.dot} />
+        </div>
+      ) : (
+        children
+      )}
     </button>
   );
 };

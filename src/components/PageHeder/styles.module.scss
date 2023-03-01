@@ -1,0 +1,13 @@
+@import "../../assets/styles/core/variables";
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  .pageTitle {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: $text-dark;
+  }
+}

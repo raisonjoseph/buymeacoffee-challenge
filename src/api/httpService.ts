@@ -14,11 +14,11 @@ if (!REACT_APP_API_ENDPOINT) {
 
 export const baseURL = REACT_APP_API_ENDPOINT;
 
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = false;
 
 const instance = axios.create({
   baseURL,
-  withCredentials: true,
+  withCredentials: false,
 });
 
 const onRequestSuccess = (config: InternalAxiosRequestConfig) => {
